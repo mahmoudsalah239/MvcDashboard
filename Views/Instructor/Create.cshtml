@@ -1,0 +1,40 @@
+﻿@model Instructor
+@{
+    ViewData["Title"] = "Create";
+  
+}
+
+<h1>Create</h1>
+
+<form asp-action="Create" class="card w-50 p-5 m-auto shadow">
+    <div class="m-1">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form form-control" />
+    </div>
+    <div class="m-1">
+        <label asp-for="Phone"></label>
+        <input asp-for="Phone" class="form form-control" />
+    </div>
+    <div class="m-1">
+        <label asp-for="Salary"></label>
+        <input asp-for="Salary" class="form form-control" />
+    </div>
+    <div>
+        <label asp-for="Address"></label>
+        <input asp-for="Address" class="form form-control" />
+    </div>
+    <div class="m-1">
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form form-control" />
+    </div>
+    <div class="m-1">
+        <label asp-for="courseId"></label>
+    
+
+   
+        <input asp-for="Image" class="form form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Save</button>
+
+</form>
+

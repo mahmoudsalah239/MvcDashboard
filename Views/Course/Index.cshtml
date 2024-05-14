@@ -1,0 +1,56 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model List<Course>
+<a asp-action="Create" class="btn btn-outline-primary">Add New Course</a>
+<hr />
+
+<h1>All courses</h1>
+
+
+
+
+@if (Model.Count() <= 0)
+{
+    <h1 class="text-center text-warning mt-5"> there is no course </h1>
+
+}
+else
+{
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Hours</th>
+                <th>Degree</th>
+                <th>Department</th>
+                <th>Details</th>
+                <th>Edit</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Course course in Model)
+            {
+            <td>@course.Name</td>
+            <td>@course.Image</td>
+            <td>@course.Hours</td>
+            <td>@course.Degree</td>
+            <td>@course.Department</td>
+            <td><a class="btn btn-success" href="#">Details</a></td>
+            <td><a class="btn btn-warning" href="#">Edit</a></td>
+            <td><a class="btn btn-warning" href="#">Update</a></td>
+
+            }
+
+        </tbody>
+
+
+    </table>
+
+}
+
+
+
+

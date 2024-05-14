@@ -1,0 +1,53 @@
+﻿@model List<Instructor>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<a asp-action="Create" class="btn btn-outline-primary" >Add New INstructor</a>
+<hr />  
+
+<h1>display all instructor</h1>
+
+
+
+@if (Model.Count() <= 0)
+{
+    <h1 class="text-center text-warning mt-5" > there is no Instructor </h1>
+
+}
+else
+{
+    <table class="table table-striped">
+    <thead>
+        <tr>
+                <th>Name</th>
+                <th>Image</th>
+                <th>Phone</th>
+                <th>Salary</th>
+                <th>Details</th>
+                <th>Edit</th>
+                <th>Update</th>
+        </tr>
+    </thead>
+    <tbody >
+        @foreach (Instructor ins in Model)
+    {
+            <td>@ins.Name</td>
+            <td>@ins.Image</td>
+            <td>@ins.Phone</td>
+            <td>@ins.Salary</td>
+            <td><a class="btn btn-success" href="#">Details</a></td>
+            <td><a class="btn btn-warning" href="#">Edit</a></td>
+            <td><a class="btn btn-warning" href="#">Update</a></td>
+
+    }
+
+    </tbody>
+
+
+</table>
+    
+}
+
+
+
